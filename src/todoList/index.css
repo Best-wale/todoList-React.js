@@ -1,0 +1,79 @@
+/* Base styles */
+.task-enter {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom checkbox */
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5D5CDE;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.custom-checkbox:checked {
+    background-color: #5D5CDE;
+}
+
+.custom-checkbox:checked:after {
+    content: '\2713';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Dark mode styles */
+.dark .custom-checkbox {
+    border-color: #6B7280;
+}
+
+.dark .custom-checkbox:checked {
+    background-color: #5D5CDE;
+    border-color: #5D5CDE;
+}
+
+/* Priority indicators */
+.priority-high {
+    background-color: rgba(239, 68, 68, 0.15);
+}
+
+.priority-medium {
+    background-color: rgba(245, 158, 11, 0.15);
+}
+
+.priority-low {
+    background-color: rgba(16, 185, 129, 0.15);
+}
+
+.dark .priority-high {
+    background-color: rgba(239, 68, 68, 0.2);
+}
+
+.dark .priority-medium {
+    background-color: rgba(245, 158, 11, 0.2);
+}
+
+.dark .priority-low {
+    background-color: rgba(16, 185, 129, 0.2);
+}
